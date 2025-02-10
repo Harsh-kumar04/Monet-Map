@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Money Map</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">💸 Finance Tracker</div>
+      <ul>
+        <li><a href="#">🏠 Home</a></li>
+        <li><a href="transactions.html">📜 View Transactions</a></li>
+        <li><a href="budget.html">💰 Manage Budget</a></li>
+        <li><a href="charts.html">📊 View Spending Report</a></li>
+        <li><a href="savings.html">🏦 Track Savings</a></li>
+      </ul>
+    </nav>
+    <div id="content">
+      <div id="left">
+        <div class="summary">
+          <h1>Your Balance <span id="bal"></span></h1>
+          <p>📥 Income: <span id="inc"></span></p>
+          <p>📤 Expenses: <span id="exp"></span></p>
+          <p>💰 Savings: <span id="sav"></span></p>
+        </div>
+
+        <h2>
+          What is Your Income : <input id="income" type="number" /><span
+            id="in"
+          ></span>
+        </h2>
+        <h2>
+          Your Expenses :
+          <input type="char" placeholder="Item name" id="item" />
+          <input type="number" placeholder="Amount" id="amt" />
+          <button id="add">Add Item</button>
+        </h2>
+        <button id="cal">Calculate</button>
+
+        <h2>Expense list</h2>
+        <ul id="explist"></ul>
+        <button id="remove">Remove Item</button>
+      </div>
+
+      <div id="right">
+        <img id="imag" src="img\wall.jpg" alt="img" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
