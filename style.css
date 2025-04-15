@@ -8,39 +8,73 @@ html,body{
   width: 100%;
   background-color:white;
   font-family: sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
+}
+body.darkmode{
+  background: rgb(35, 35, 35);
+  color: white;
+}
+
+#dark{
+  border-radius: 50px 50px;
+  font-size: 30px;
+  background: black;
 }
 #content{
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: space-between;
-  padding: 0px 90px;
-  padding-top: 170px;
+  padding: 0px 20px;
+  padding-top: 110px;
   padding-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
   
 }
+#left, #right {
+  flex: 1; 
+  max-width: 100%;
+  padding: 20px;
+  min-height: auto;
+}
+
 #left{
   height: 100%;
   width: 50%;
   padding: 60px;
+  
 
 }
 
 #right{
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
   width: 50%;
   /* background: #831111; */
   margin-left: 10px;
+  overflow: hidden;
 }
 #imag{
-  display: inline;
+  display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   justify-content: end;
-  right: 200px;
+  /* right: 200px; */
 }
+#imag img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 #add, #cal , #remove{
   color: rgb(0, 0, 0);
   padding: 10px 20px;
@@ -50,9 +84,13 @@ html,body{
   font-size: 16px;
 }
 
-#add:hover, #cal:hover , #remove:hover{
-background-color: green;
-color: aliceblue;
+#add:hover  {
+background-color: greenyellow;
+color: rgb(0, 0, 0);
+}
+#remove:hover{
+  background-color: red;
+  color: white;
 }
 
 .logo{
@@ -60,29 +98,36 @@ color: aliceblue;
   font-weight: 200;
   font-size: 40px;
 }
-.logo:hover{
+.logo:hover,#ba:hover{
   color: green;
 
+}
+#ba{
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
 }
 
 
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 15px;
-  color: white; 
+  padding: 10px;
   position: fixed;
-  top: 50px;
-  padding: 10px 90px;
-  font-size: 20px;
+  position: fixed;
+  top: 15px;
+  padding: 15px 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 17px;
 }
 
 .navbar ul li{
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 10px;
   position: relative;
 
 }
@@ -108,17 +153,29 @@ color: aliceblue;
 .navbar ul li :hover::after{
   width: 100%;
 }
-input{
-  font-size: 20px;
+input {
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
 }
 
+.first{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 
 #in{
   color: rgb(164, 12, 12);
 }
 .summary{
+  display: block;
   font-size: 30px;
-  margin-bottom: 101px;
+  margin-bottom: 60px;
 }
 #income{
   margin-bottom:10px ;
@@ -131,4 +188,110 @@ input{
     padding: 10px;
     background-color: lightgray;
     border-radius:4px;
+    font-size: 20px;
 }
+#det{
+  display: block;
+  justify-content: left;
+
+}
+.exe{
+display: flex;
+
+align-items: center;
+gap : 10px;
+margin-bottom: 50px;
+}
+.n{
+  width: 30%;
+}
+#ex{
+  width: 250px;
+}
+#exl{
+  font-size: 30px;
+  margin-bottom: 200px;
+}
+#cal{
+  background-color: green;
+  color: white;
+  
+
+}
+#cal:hover{
+  background-color: sienna;
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: white; 
+    top: 0;
+    left: 0;
+    font-size: 15px;
+  
+  }
+
+  .navbar ul {
+    display: none;
+    
+  }
+
+  
+  #right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #right img {
+    display: none;
+    max-width: 90%;
+  }
+  button {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+  input {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+  #left{
+    height: 100%;
+    width: 100%;
+  }
+  .exe {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adds space between elements */
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  #ex {
+    text-align: center;
+    font-size: 22px; /* Slightly larger for readability */
+  }
+
+  .exe input {
+    width: 90%; /* Full width on smaller screens */
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left; /* Align text properly */
+  }
+
+  .exe button {
+    width: 90%;
+    max-width: 200px;
+    font-size: 18px;
+    padding: 12px;
+  }
+  
+  
+}
+
+

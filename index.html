@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <title>Money Map</title>
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">💸 Finance Tracker</div>
+      <div class="logo">💸Money Map</div>
       <ul>
         <li><a href="#">🏠 Home</a></li>
         <li><a href="transactions.html">📜 View Transactions</a></li>
@@ -20,32 +20,38 @@
     <div id="content">
       <div id="left">
         <div class="summary">
-          <h1>Your Balance <span id="bal"></span></h1>
+          <h1 id="ba">Your Balances <button id="dark">🌜</button> </h1>
+          
           <p>📥 Income: <span id="inc"></span></p>
-          <p>📤 Expenses: <span id="exp"></span></p>
+          <p>🏦 Expenses: <span id="exp"></span></p>
           <p>💰 Savings: <span id="sav"></span></p>
         </div>
 
-        <h2>
-          What is Your Income : <input id="income" type="number" /><span
+        <h2 id="det">
+          <div class="first">
+          <label for="income">Enter Your Income : </label
+          ><input id="income" placeholder="Your Income" type="number" /><span
             id="in"
           ></span>
-        </h2>
-        <h2>
-          Your Expenses :
-          <input type="char" placeholder="Item name" id="item" />
-          <input type="number" placeholder="Amount" id="amt" />
-          <button id="add">Add Item</button>
-        </h2>
-        <button id="cal">Calculate</button>
+          <button id="cal">Calculate</button>
+        </div>
 
-        <h2>Expense list</h2>
+          <div class="exe">
+            <label id="ex">Your Expenses : </label>
+
+            <input type="text" placeholder="Item name" id="item" class="n" />
+            <input type="number" placeholder="Amount" id="amt" class="n" />
+            <button id="add">Add item</button>
+          </div>
+        </h2>
+
+        <label id="exl">Expense list</label>
         <ul id="explist"></ul>
         <button id="remove">Remove Item</button>
       </div>
 
       <div id="right">
-        <img id="imag" src="img\wall.jpg" alt="img" />
+        <img id="imag" src="img/wall.jpg" alt="img" />
       </div>
     </div>
 
