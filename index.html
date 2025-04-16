@@ -4,54 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Money Map</title>
   </head>
   <body>
+    
     <nav class="navbar">
       <div class="logo">💸Money Map</div>
       <ul>
-        <li><a href="#">🏠 Home</a></li>
+        <!-- <li><a href="#">🏠 Home</a></li>
         <li><a href="transactions.html">📜 View Transactions</a></li>
         <li><a href="budget.html">💰 Manage Budget</a></li>
         <li><a href="charts.html">📊 View Spending Report</a></li>
-        <li><a href="savings.html">🏦 Track Savings</a></li>
+        <li><a href="savings.html">🏦 Track Savings</a></li> -->
+        <button id="dark"><i class="fa-regular fa-moon"></i></button>
       </ul>
     </nav>
     <div id="content">
       <div id="left">
         <div class="summary">
-          <h1 id="ba">Your Balances <button id="dark">🌜</button> </h1>
-          
-          <p>📥 Income: <span id="inc"></span></p>
-          <p>🏦 Expenses: <span id="exp"></span></p>
-          <p>💰 Savings: <span id="sav"></span></p>
+          <h1 id="ba">Your Balances</h1>
+
+          <div class="sum">
+            <p>Income:</p>
+            <div id="inc">₹</div>
+          </div>
+
+          <div class="sum">
+            <p>Expenses:</p>
+            <div id="exp">₹</div>
+          </div>
+
+          <div class="sum">
+            <p>Savings:</p>
+            <div id="sav">₹</div>
+          </div>
         </div>
 
-        <h2 id="det">
-          <div class="first">
-          <label for="income">Enter Your Income : </label
-          ><input id="income" placeholder="Your Income" type="number" /><span
-            id="in"
-          ></span>
-          <button id="cal">Calculate</button>
+        <div class="first">
+          <label id="txt">Enter Your Income </label>
+          <div class="inner">
+            <input id="income" placeholder="Your Income" type="number" />
+            <button id="cal">Calculate</button>
+          </div>
         </div>
 
-          <div class="exe">
-            <label id="ex">Your Expenses : </label>
+        <div class="exe">
+          <label id="ex">Your Expenses </label>
 
-            <input type="text" placeholder="Item name" id="item" class="n" />
+          <input type="text" placeholder="Item name" id="item" class="n" />
+          <div class="do">
             <input type="number" placeholder="Amount" id="amt" class="n" />
             <button id="add">Add item</button>
           </div>
-        </h2>
-
-        <label id="exl">Expense list</label>
-        <ul id="explist"></ul>
-        <button id="remove">Remove Item</button>
+        </div>
       </div>
 
       <div id="right">
-        <img id="imag" src="img/wall.jpg" alt="img" />
+        <div id="exl">Expense list</div>
+        <ul id="explist"></ul>
+        <button id="remove">Remove Item</button>
       </div>
     </div>
 
